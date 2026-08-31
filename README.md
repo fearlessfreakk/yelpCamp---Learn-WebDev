@@ -2,9 +2,6 @@
 
 YelpCamp is a full-stack web application designed for outdoor enthusiasts to share, rate, and review campgrounds globally. Built with Node.js, Express, and MongoDB, it features interactive maps, secure user authentication, robust input validation, and cloud-based image management.
 
-## 🚀 Live Demo & Repository
-* **GitHub Repository**: [fearlessfreakk/yelpCamp---Learn-WebDev](https://github.com/fearlessfreakk/yelpCamp---Learn-WebDev.git)
-
 ---
 
 ## ✨ Features
