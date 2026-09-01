@@ -77,6 +77,7 @@ YelpCamp uses MongoDB as its primary persistence store. Below is the Entity-Rela
 
 ```mermaid
 erDiagram
+    direction LR
     USER {
         ObjectId id PK
         string email
