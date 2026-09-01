@@ -11,11 +11,12 @@ YelpCamp is a full-stack, server-side rendered (SSR) web application where users
 The system integrates with cloud databases, object storage providers, maps, and geocoding services:
 
 ```mermaid
-graph TD
-    Client[Browser / Client] <--> Express[Express.js Web Server]
-    Express <--> MongoDB[(MongoDB database)]
-    Express <--> Cloudinary[Cloudinary CDN]
-    Express <--> Mapbox[Mapbox Geocoding API]
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'Arial, sans-serif', 'primaryColor': '#ffffff', 'primaryTextColor': '#111111', 'primaryBorderColor': '#333333', 'lineColor': '#333333', 'tertiaryColor': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#333333'}}}%%
+flowchart TD
+    Client["Browser / Client"] <--> Express["Express.js Web Server"]
+    Express <--> MongoDB[("MongoDB database")]
+    Express <--> Cloudinary["Cloudinary CDN"]
+    Express <--> Mapbox["Mapbox Geocoding API"]
 ```
 
 ---
@@ -76,6 +77,7 @@ YelpCamp uses MongoDB as its primary persistence store. Below is the Entity-Rela
 ### Entity-Relationship Diagram
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'Arial, sans-serif', 'primaryColor': '#ffffff', 'primaryTextColor': '#111111', 'primaryBorderColor': '#333333', 'lineColor': '#333333', 'entityBackground': '#ffffff', 'attributeBackgroundColorOdd': '#ffffff', 'attributeBackgroundColorEven': '#ffffff'}}}%%
 erDiagram
     direction LR
     USER {
@@ -188,6 +190,7 @@ The following charts outline the request and processing flows inside the applica
 Demonstrates registration, hashing verification, and user session storage.
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'Arial, sans-serif', 'actorBkg': '#ffffff', 'actorBorder': '#333333', 'actorTextColor': '#111111', 'actorLineColor': '#333333', 'signalColor': '#333333', 'signalTextColor': '#111111', 'labelBoxBkgColor': '#ffffff', 'labelBoxBorderColor': '#333333', 'labelTextColor': '#111111', 'loopTextColor': '#111111', 'noteBkgColor': '#ffffff', 'noteBorderColor': '#333333', 'noteTextColor': '#111111', 'activationBkgColor': '#ffffff', 'activationBorderColor': '#333333', 'sequenceNumberColor': '#333333'}}}%%
 sequenceDiagram
     autonumber
     actor User as Client / User
@@ -212,6 +215,7 @@ sequenceDiagram
 Illustrates form parsing, multi-destination upload (Cloudinary and Mapbox), database persistence, and views updates.
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'Arial, sans-serif', 'actorBkg': '#ffffff', 'actorBorder': '#333333', 'actorTextColor': '#111111', 'actorLineColor': '#333333', 'signalColor': '#333333', 'signalTextColor': '#111111', 'labelBoxBkgColor': '#ffffff', 'labelBoxBorderColor': '#333333', 'labelTextColor': '#111111', 'loopTextColor': '#111111', 'noteBkgColor': '#ffffff', 'noteBorderColor': '#333333', 'noteTextColor': '#111111', 'activationBkgColor': '#ffffff', 'activationBorderColor': '#333333', 'sequenceNumberColor': '#333333', 'altSectionBkgColor': '#ffffff'}}}%%
 sequenceDiagram
     autonumber
     actor User as Client / User
@@ -254,6 +258,7 @@ sequenceDiagram
 Highlights review submission, association with campgrounds, and data population.
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'Arial, sans-serif', 'actorBkg': '#ffffff', 'actorBorder': '#333333', 'actorTextColor': '#111111', 'actorLineColor': '#333333', 'signalColor': '#333333', 'signalTextColor': '#111111', 'labelBoxBkgColor': '#ffffff', 'labelBoxBorderColor': '#333333', 'labelTextColor': '#111111', 'loopTextColor': '#111111', 'noteBkgColor': '#ffffff', 'noteBorderColor': '#333333', 'noteTextColor': '#111111', 'activationBkgColor': '#ffffff', 'activationBorderColor': '#333333', 'sequenceNumberColor': '#333333', 'altSectionBkgColor': '#ffffff'}}}%%
 sequenceDiagram
     autonumber
     actor User as Client / User
@@ -287,6 +292,7 @@ sequenceDiagram
 To render client-side maps with live server-side database records, YelpCamp maps Mongoose queries to frontend JavaScript scripts:
 
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {'fontSize': '16px', 'fontFamily': 'Arial, sans-serif', 'primaryColor': '#ffffff', 'primaryTextColor': '#111111', 'primaryBorderColor': '#333333', 'lineColor': '#333333', 'edgeLabelBackground': '#ffffff', 'tertiaryColor': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#333333'}}}%%
 flowchart TD
     A["User requests /campgrounds"] --> B("Controller loads all campgrounds from DB")
     B --> C("Controller returns campgrounds collection to EJS index view")
